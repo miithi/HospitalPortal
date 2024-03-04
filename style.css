@@ -1,6 +1,9 @@
 *{
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
     margin: 0;
     padding: 0;
    
@@ -50,6 +53,7 @@
 }
 
 .navbar_menu{
+    font-family: "SemiBold 600", sans-serif;
     display:flex;
     align-items: center;
     list-style: none;
@@ -198,4 +202,205 @@
         transform: translateY(-8px) rotate(-45deg);
       }
 
+}
+
+/* Main section of CSS */
+.main{
+    background-color: #fff;
+}
+
+.main_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh;
+    background-color: #fff;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main_content h1{
+    font-size: 4.5rem;
+    font-family: "SemiBold 600", sans-serif;
+    background-color: #74C0FC;
+    background-image: linear-gradient(to top, #1b6aa6 0%, #74C 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main_content h2{
+    font-size: 4rem;
+    font-family: "SemiBold 600", sans-serif;
+    background-color: #74C0FC;
+    background-image: linear-gradient(to top, #b721ff 0%, #74C0FC 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main_content p{
+    margin-top: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.main_btn{
+    font-size: 1.5rem;
+    background-image: linear-gradient(to top, #1b6aa6 0%, #bae1ff 100%);
+    padding: 14px 32px;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35 ease;
+    outline: none;
+}
+
+.main_btn a{
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.main_btn:after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #74C;
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.main_btn:hover{
+    color: #fff;
+}
+
+.main_btn:hover:after{
+    width: 100%;
+}
+
+.main_imgContainer{
+    text-align: center;
+}
+
+#main_img{
+    height: 80%;
+    width: 80%;
+}
+
+/* Making it responsive */
+@media screen and (max-width: 768px){
+    .main_container{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90vh;
+    }
+
+    .main_content{
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .main_content h1{
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .main_content h2{
+        font-size: 3rem;
+    }
+    
+    .main_content p{
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .main_content h1{
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .main_content h2{
+        font-size: 3rem;
+    }
+    
+    .main_content p{
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .main_btn{
+        padding: 12px 36px;
+        margin: 2.5rem 0;
+    }
+}
+
+/* Services Section */
+.services{
+    background:#e1e8ed;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height:100vh;
+}
+
+.services h1{
+    background-color:#1b6aa6;
+    background-image: linear-gradient(to right, 
+    #74C0FC 0%,
+    #6eb8f1 21%,
+    #1b6aa6 78%,
+    #04477a 100%);
+    background-size: 100%;
+    margin-bottom: 5rem;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-size: 4rem;
+}
+
+.services_container{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service_cards{
+    margin: 1rem;
+    height: 525px;
+    width: 400px;
+    border-radius: 4px;
+    background-color: #fff;
+
+}
+
+.serviceCard_img{
+    text-align: center;
+}
+
+#service_img{
+    height: 80%;
+    width: 80%;
 }
